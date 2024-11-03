@@ -17,3 +17,17 @@ a, button, .link{
 input, button{
   border: none;
 }
+/* Mobile */
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablet devices */
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  /* Styles for desktop and larger screens */
+}

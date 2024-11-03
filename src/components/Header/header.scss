@@ -1,23 +1,28 @@
 .header{
     .top{
         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         color: #5B8EA8;
-         padding: 3px;
+        justify-content: space-between;
+        align-items: center;
+        color: #5B8EA8;
+        padding: 5px 50px;
+        grid-gap: 10px;
     }
     .main{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 25px;
+        padding: 35px 50px;
         background-color: #5B8EA8;
         .logo{
             cursor: pointer;
         }
         .search{
             input, button{
-                padding: 10px;
+                padding: 15px;
+            }
+            input{
+                width: 300px;
+                max-width: 50vw;
             }
             .searchBtn{
                 background-color: #FF9800;
@@ -30,15 +35,15 @@
       .letters{
         width: 80vw;
         display: flex;
-        grid-gap: 0.8vw;
+        grid-gap: 0.6vw;
         justify-content: center;
         align-items: center;
         overflow-y: auto;
         .letter {
           cursor: pointer;
-          min-width: 30px;
-          min-height: 30px;
-          line-height: 30px;
+          min-width: 35px;
+          min-height: 35px;
+          line-height: 35px;
           text-align: center;
           background-color: #5B8EA8;
           color: white;
@@ -48,7 +53,7 @@
     }
     
 }
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .header{
         .abc{
             .letters{
