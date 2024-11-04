@@ -15,7 +15,7 @@ export default function Header() {
                 <Link to="/sign-up">Sign Up</Link>
             </div>
         </section>
-        <section className="main">
+        <section className="mainHeader">
             <img className='logo' onClick={()=>{navigate("/")}} src="/assets/logo.png" alt="" />
             <form className="search">
                 <input type="text" placeholder='Search for songs...' />
