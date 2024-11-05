@@ -18,20 +18,20 @@ export default function Sidebar() {
 
   return (
     <nav className="sidebar">
-      <Link to="/songs" className="navlink link">
+      <Link onClick={() => setIsOpenUser(false)} to="/songs" className="navlink link">
         <FontAwesomeIcon icon={faMusic} />
         <p>Songs</p>
       </Link>
 
-      <Link to="/playlists" className="navlink link">
+      <Link onClick={() => setIsOpenUser(false)} to="/playlists" className="navlink link">
         <FontAwesomeIcon icon={faList} />
         <p>Playlists</p>
       </Link>
-      <Link to="/add-song" className="navlink link">
+      <Link onClick={() => setIsOpenUser(false)} to="/add-song" className="navlink link">
         <FontAwesomeIcon icon={faPlus} />
         <p>Add song</p>
       </Link>
-      <Link to="/create-playlist" className="navlink link">
+      <Link onClick={() => setIsOpenUser(false)} to="/create-playlist" className="navlink link">
         <FontAwesomeIcon icon={faFolderPlus} />
         <p>Create Playlist</p>
       </Link>
@@ -41,12 +41,12 @@ export default function Sidebar() {
           className="navlink link"
         >
           <FontAwesomeIcon icon={faUser} />
-          <p>
-            lazo123{" "}
+          <p className="usernameCarpet">
+            <span className="username">lazo123</span>
             {isOpenUser ? (
-              <FontAwesomeIcon icon={faCaretRight} />
-            ) : (
               <FontAwesomeIcon icon={faCaretDown} />
+            ) : (
+              <FontAwesomeIcon icon={faCaretRight} />
             )}
           </p>
         </div>
@@ -56,9 +56,9 @@ export default function Sidebar() {
             animate={{ opacity: 1, y: 0 }}
             className="dropdown"
           >
-            <Link className="openUserlink">Profile</Link>
-            <p className="openUserlink">Edit Profile</p>
-            <p className="openUserlink logout">Log out</p>
+            <Link onClick={() => setIsOpenUser(false)} className="openUserlink">Profile</Link>
+            <p onClick={() => setIsOpenUser(false)} className="openUserlink">Edit Profile</p>
+            <p onClick={() => setIsOpenUser(false)}  className="openUserlink logout">Log out</p>
           </motion.div>
         )}
       </div>

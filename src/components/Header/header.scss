@@ -6,24 +6,27 @@
         justify-content: space-between;
         align-items: center;
         color: #5B8EA8;
-        padding: 5px 50px;
-        grid-gap: 10px;
+        padding: 2px 50px;
+        grid-gap: 5px;
+        font-size: 13px;
+        font-weight: bold;
     }
     .mainHeader{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 25px 50px;
+        padding: 15px 50px;
         background-color: #5B8EA8;
         .logo{
             cursor: pointer;
+            height: 70px;
         }
         .search{
             input, button{
-                padding: 10px;
+                padding: 7px;
             }
             input{
-                width: 250px;
+                width: 200px;
                 max-width: 50vw;
             }
             .searchBtn{
@@ -33,19 +36,20 @@
         }
     }
     .abc {
-        padding: 1vw 10vw;
+        padding: 1.2vw 180px;
+        text-align: center;
       .letters{
-        width: 80vw;
+        text-align: center;
+        width: 100%;
         display: flex;
-        grid-gap: 0.6vw;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
+        grid-gap: 0.5vw;
         overflow-y: auto;
         .letter {
           cursor: pointer;
-          min-width: 35px;
-          min-height: 35px;
-          line-height: 35px;
+          min-width: 28px;
+          min-height: 25px;
+          line-height: 25px;
           text-align: center;
           background-color: #5B8EA8;
           color: white;
@@ -55,15 +59,23 @@
     }
     
 }
-@media (max-width: 1400px) {
+
+@media (max-width: 1000px) {
     .header{
         .abc{
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
             .letters{
                 justify-content: unset;
+                width: auto;
             }
         }
     }
 }
+
 @media (max-width: 700px) {
     /* Styles for mobile devices */
     .header{
@@ -74,12 +86,6 @@
                 input, button{
                     padding: 7px;
                 }
-            }
-        }
-        .abc{
-            padding: 1vw;
-            .letters{
-                width: 100%;
             }
         }
     }
