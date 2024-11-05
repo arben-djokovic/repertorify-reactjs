@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import RightSidebar from "./components/RightSidebar/RightSidebar";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
+import Songs from "./pages/Songs/Songs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <div className="mainContent">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/songs" element={<Songs />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>

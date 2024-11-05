@@ -1,0 +1,33 @@
+.songs{
+    background-color: white;
+    width: 100%;
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 15px;
+    padding: 4vw;
+    .songsHeader{
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        h1{
+            font-weight: normal;
+        }
+        .genres{
+            display: flex;
+            grid-gap: 10px;
+            align-items: center;
+        }
+    }
+    .songsList{
+        margin: 30px 0;
+    }
+    .arrows{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 30px;
+        .arrow{
+            font-size: 25px;
+        }
+    }
+}

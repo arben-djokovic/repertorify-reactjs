@@ -10,11 +10,12 @@ import {
   faPlus,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Sidebar() {
   let [isOpenUser, setIsOpenUser] = React.useState(false);
+  const navigate = useNavigate()
 
   return (
     <nav className="sidebar">
@@ -56,9 +57,9 @@ export default function Sidebar() {
             animate={{ opacity: 1, y: 0 }}
             className="dropdown"
           >
-            <Link onClick={() => setIsOpenUser(false)} className="openUserlink">Profile</Link>
-            <p onClick={() => setIsOpenUser(false)} className="openUserlink">Edit Profile</p>
-            <p onClick={() => setIsOpenUser(false)}  className="openUserlink logout">Log out</p>
+            <p onClick={() => setIsOpenUser(false)} className="openUserlink link">Profile</p>
+            <p onClick={() => setIsOpenUser(false)} className="openUserlink link">Edit Profile</p>
+            <p onClick={() => setIsOpenUser(false)}  className="openUserlink logout link">Log out</p>
           </motion.div>
         )}
       </div>

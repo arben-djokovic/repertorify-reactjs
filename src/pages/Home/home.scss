@@ -74,7 +74,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      grid-gap: 10px;
+      grid-gap: 30px;
+      h1{
+        font-weight: normal;
+      }
       .listSongs{
         width: 100%;
         display: flex;
