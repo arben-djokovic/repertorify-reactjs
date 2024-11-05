@@ -29,16 +29,14 @@
             grid-template-rows: auto auto;
             justify-content: center;
             align-items: center;
-            grid-gap: 2vw;
-            padding: 20px ; 
+            grid-gap: 15px;
+            padding: 15px; 
             box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.447); 
           }
           
           img {
             border-radius: 10px;
-            height: 6vw;
-            // width: 6vw;
-            min-height: 100px;
+            max-width: 100%;
           }
         }
       }
@@ -54,6 +52,12 @@
       .swiper-slide-active {
         opacity: 1;
         z-index: 2;
+        img{
+          cursor: pointer;
+          &:hover{
+            opacity: 0.8;
+          }
+        }
       }
       .swiper-pagination{
        bottom: 0;
