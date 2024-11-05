@@ -5,7 +5,13 @@
     align-items: center;
     border-radius: 10px;
     background-color: #D9D9D9;
+    position: relative;
     color: black;
+    z-index: 2;
+    &.active { 
+      position: relative;
+      z-index: 3;
+    }
     .right{
       display: flex;
       grid-gap: 15px;
@@ -17,6 +23,21 @@
       #icon{
         padding: 3px;
         font-size: 22px;
+      }
+    }
+    .ellipsisOpen{
+      position: absolute;
+      top: 35px;
+      background-color: #5c5c5c;
+      z-index: 4;
+      padding: 10px;
+      border-radius: 7px;
+      width: 150px;
+      right: 0;
+      color: white;
+      .ellipsisItem{
+        padding: 10px;
+        border-bottom: 1px solid white;
       }
     }
 }
