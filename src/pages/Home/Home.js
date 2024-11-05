@@ -64,7 +64,7 @@ export default function Home() {
       <section className="songsHome">
         <h1>Songs</h1>
         <div className="listSongs">
-          {[1,2,3,4,5].map((song, i) => <SongItem i={i} />)}
+          {[1,2,3,4,5].map((song, i) => <SongItem key={i} i={i} />)}
         </div>
           <Link to="/songs" className="moreBtn">More...</Link>
       </section>

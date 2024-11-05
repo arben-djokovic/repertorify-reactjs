@@ -4,6 +4,7 @@ import "./App.scss";
 import Sidebar from "./components/Sidebar/Sidebar";
 import RightSidebar from "./components/RightSidebar/RightSidebar";
 import Home from "./pages/Home/Home";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </div>
         <RightSidebar />
       </main>
+      <Footer />
     </div>
   );
 }

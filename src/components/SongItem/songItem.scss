@@ -5,10 +5,19 @@
     align-items: center;
     border-radius: 10px;
     background-color: #D9D9D9;
+    color: black;
     .right{
       display: flex;
-      grid-gap: 20px;
+      grid-gap: 15px;
       align-items: center;
+      color: #3a3a3a;
+      .username{
+        font-size: 13px;
+      }
+      #icon{
+        padding: 1px;
+        font-size: 22px;
+      }
     }
 }
 .songitem2{
