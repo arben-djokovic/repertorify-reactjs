@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "./header.scss"
-import { motion } from "framer-motion"
 
 export default function Header() {
     const navigate = useNavigate()
     const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
   return (
-    <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='header'>
+    <header className='header'>
         <section className="top">
             <Link to="/about-us">What is Repertorify? </Link>
             <div className="sign">
@@ -32,6 +31,6 @@ export default function Header() {
                 ))}
             </div>
         </section>
-    </motion.header>
+    </header>
   )
 }
