@@ -18,6 +18,9 @@ body, html{
 .delete{
   color: red !important;
 }
+.pageContent{
+  max-width: 1020px;
+}
 a, button, .link{
   color: unset;
   cursor: pointer;

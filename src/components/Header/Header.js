@@ -6,7 +6,7 @@ export default function Header() {
     const navigate = useNavigate()
     const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
   return (
-    <header className='header'>
+    <header className='header '>
         <section className="top">
             <Link to="/about-us">What is Repertorify? </Link>
             <div className="sign">
@@ -23,7 +23,7 @@ export default function Header() {
             </form>
         </section>
         <section className="abc">
-            <div className="letters">
+            <div className="letters pageContent" >
                 {letters.map((letter, index) => (
                     <p key={index} className="letter">
                         {letter}

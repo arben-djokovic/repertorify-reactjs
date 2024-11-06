@@ -4,10 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretDown,
   faCaretRight,
-  faFolderPlus,
   faList,
   faMusic,
-  faPlus,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -27,22 +25,14 @@ export default function Sidebar() {
         <FontAwesomeIcon icon={faList} />
         <p>Playlists</p>
       </Link>
-      <Link onClick={() => setIsOpenUser(false)} to="/add-song" className="navlink link">
-        <FontAwesomeIcon icon={faPlus} />
-        <p>Add song</p>
-      </Link>
-      <Link onClick={() => setIsOpenUser(false)} to="/create-playlist" className="navlink link">
-        <FontAwesomeIcon icon={faFolderPlus} />
-        <p>Create Playlist</p>
-      </Link>
       <div className="openUser">
         <div
           onClick={() => setIsOpenUser(!isOpenUser)}
           className="navlink link"
         >
-          <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon className="userIcon" icon={faUser} />
           <p className="usernameCarpet">
-            <span className="username">lazo123</span>
+            <span className="username">Lazo123</span>
             {isOpenUser ? (
               <FontAwesomeIcon icon={faCaretDown} />
             ) : (
@@ -56,6 +46,12 @@ export default function Sidebar() {
             animate={{ opacity: 1, y: 0 }}
             className="dropdown"
           >
+          <Link onClick={() => setIsOpenUser(false)} to="/add-song" className="openUserlink link">
+            <p>Add song</p>
+          </Link>
+          <Link onClick={() => setIsOpenUser(false)} to="/create-playlist" className="openUserlink link" >
+            <p>Create Playlist</p>
+          </Link>
             <p onClick={() => setIsOpenUser(false)} className="openUserlink link">Profile</p>
             <p onClick={() => setIsOpenUser(false)} className="openUserlink link">Edit Profile</p>
             <p onClick={() => setIsOpenUser(false)}  className="openUserlink delete link">Log out</p>

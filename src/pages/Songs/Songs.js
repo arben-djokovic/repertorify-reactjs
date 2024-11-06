@@ -6,7 +6,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Songs() {
   return (
-    <section className="songs page">
+    <section className="songs page pageContent">
       <div className="songsHeader">
         <h1>Songs:</h1>
         <div className="genres">
