@@ -38,7 +38,11 @@
     .abc {
         padding: 1.2vw 180px;
         text-align: center;
-      .letters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .letters{
+        max-width: 1020px;
         text-align: center;
         width: 100%;
         display: flex;
