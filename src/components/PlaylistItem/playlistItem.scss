@@ -26,9 +26,6 @@
             display: flex;
             flex-direction: column;
             grid-gap: 12px;
-            .playlistName{
-                
-            }
             .username{
                 font-size: 13px;
                 color: #363636;
@@ -40,3 +37,31 @@
         }
     }
 }
+
+@media (max-width: 700px) {
+    .playlistItem{
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        .user{
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            font-size: 13px;
+            .userInfo{
+                .username{
+                    font-size: 11px;
+                }
+            }
+            .heart{
+                margin: unset;
+            }
+        }
+        .img{
+            width: 70px;
+            height: 50px;
+        }
+    }
+}
+  
