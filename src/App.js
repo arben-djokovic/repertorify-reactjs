@@ -6,6 +6,7 @@ import RightSidebar from "./components/RightSidebar/RightSidebar";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import Songs from "./pages/Songs/Songs";
+import Playlists from "./pages/Playlists/Playlists";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
+            <Route path="/playlists" element={<Playlists />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>

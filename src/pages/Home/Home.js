@@ -20,9 +20,6 @@ export default function Home() {
           spaceBetween={40}
           initialSlide={1}
           centeredSlides={true}
-          pagination={{
-            clickable: true,
-          }}
           modules={[Pagination]}
           className="mySwiper"
           onSwiper={(swiper) => {
