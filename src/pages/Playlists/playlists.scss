@@ -4,13 +4,12 @@
     grid-gap: 30px;
     padding: 20px 0;
     h1{
-        font-size: 19px;
+        font-size: 30px;
     }
     .playlistsContent{
         display: flex;
-        grid-gap: 1vw;
-        grid-row-gap: 1.5vw;
-        justify-content: space-between;
+        grid-gap: 1.5vw;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;  
 

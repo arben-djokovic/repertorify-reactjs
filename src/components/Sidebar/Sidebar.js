@@ -9,54 +9,45 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import Dropdown from "../Dropdown/Dropdown";
 
 export default function Sidebar() {
-  let [isOpenUser, setIsOpenUser] = React.useState(false);
+  let [isEllipsisOpen, setIsEllipsisOpen] = React.useState(false);
 
   return (
     <nav className="sidebar">
-      <Link onClick={() => setIsOpenUser(false)} to="/songs" className="navlink link">
+      <Link onClick={() => setIsEllipsisOpen(false)} to="/songs" className="navlink link">
         <FontAwesomeIcon icon={faMusic} />
         <p>Songs</p>
       </Link>
 
-      <Link onClick={() => setIsOpenUser(false)} to="/playlists" className="navlink link">
+      <Link onClick={() => setIsEllipsisOpen(false)} to="/playlists" className="navlink link">
         <FontAwesomeIcon icon={faList} />
         <p>Playlists</p>
       </Link>
-      <div className="openUser">
+      <div className="openDropdown">
         <div
-          onClick={() => setIsOpenUser(!isOpenUser)}
+          onClick={() => setIsEllipsisOpen(true)}
           className="navlink link"
+          id="dropdownLink"
         >
           <FontAwesomeIcon className="userIcon" icon={faUser} />
           <p className="usernameCarpet">
             <span className="username">Lazo123</span>
-            {isOpenUser ? (
+            {isEllipsisOpen ? (
               <FontAwesomeIcon icon={faCaretDown} />
             ) : (
               <FontAwesomeIcon icon={faCaretRight} />
             )}
           </p>
         </div>
-        {isOpenUser && (
-          <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="dropdown"
-          >
-          <Link onClick={() => setIsOpenUser(false)} to="/add-song" className="openUserlink link">
-            <p>Add song</p>
-          </Link>
-          <Link onClick={() => setIsOpenUser(false)} to="/create-playlist" className="openUserlink link" >
-            <p>Create Playlist</p>
-          </Link>
-            <p onClick={() => setIsOpenUser(false)} className="openUserlink link">Profile</p>
-            <p onClick={() => setIsOpenUser(false)} className="openUserlink link">Edit Profile</p>
-            <p onClick={() => setIsOpenUser(false)}  className="openUserlink delete link">Log out</p>
-          </motion.div>
-        )}
+        <Dropdown isEllipsisOpen={isEllipsisOpen} setIsEllipsisOpen={setIsEllipsisOpen}>
+            <Link to="/profile" className="ellipsisItem link">Profile</Link>
+            <Link to="/add-song" className="ellipsisItem link">Add Song</Link>
+            <Link to="/create-playlist" className="ellipsisItem link">Create Playlist</Link>
+            <Link to="/edit-profile" className="ellipsisItem link">Edit profile</Link>
+            <p className="ellipsisItem link" >Log out</p>
+        </Dropdown>
       </div>
     </nav>
   );

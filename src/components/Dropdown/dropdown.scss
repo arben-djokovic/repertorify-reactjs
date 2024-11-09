@@ -1,0 +1,26 @@
+
+.ellipsisOpen {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #5c5c5c;
+  padding: 5px;
+  border-radius: 7px;
+  min-width: 130px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  .ellipsisItem {
+    padding: 8px;
+    font-size: 13px;
+    border-bottom: 1px solid white;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .sidebar .ellipsisOpen {
+    position: static;
+  }
+}

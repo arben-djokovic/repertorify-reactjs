@@ -2,8 +2,6 @@ import React from 'react'
 import "./playlists.scss"
 import PlaylistItem from '../../components/PlaylistItem/PlaylistItem'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function Playlists() {
   return (
@@ -13,13 +11,7 @@ export default function Playlists() {
         <Link to={"/create-playlist"} className="addItemBtn">
             <img src="assets/plus.png" alt="" />
         </Link>
-        <PlaylistItem />
-        <PlaylistItem />
-        <PlaylistItem />
-        <PlaylistItem />
-        <PlaylistItem />
-        <PlaylistItem />
-        <PlaylistItem />
+        {[1,2,3,4,5,6,7,8,9].map((item, i) => (<PlaylistItem i={i} />))}
         </div>
     </div>
   )

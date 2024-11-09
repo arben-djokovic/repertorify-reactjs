@@ -26,23 +26,6 @@
             align-items: center;
         }
     }
-    .dropdown{
-        position: absolute;
-        background-color: rgb(233, 233, 233);
-        padding: 10px;
-        z-index: 1;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        grid-gap: 10px;
-        border-radius: 5px;
-        .openUserlink{
-            padding: 3px;
-            border-bottom: 1px solid gray;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    }
 }
 @media (max-width: 700px) {
     .sidebar{
@@ -61,10 +44,6 @@
                     display: none;
                 }
             }
-        }
-        .dropdown{
-            margin-left: -50px;
-        }
-        
+        }  
     }
 }

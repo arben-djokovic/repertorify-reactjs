@@ -8,7 +8,6 @@ import { Link, useNavigate } from "react-router-dom";
 import SongItem from "../../components/SongItem/SongItem";
 
 export default function Home() {
-  // Create a ref for the Swiper instance
   const navigate = useNavigate()
   const swiperRef = useRef(null);
 

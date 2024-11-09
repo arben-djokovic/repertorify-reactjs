@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 import "./App.scss";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -7,8 +7,14 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import Songs from "./pages/Songs/Songs";
 import Playlists from "./pages/Playlists/Playlists";
+import { useEffect } from "react";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <div className="app">
       <Header />
