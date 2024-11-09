@@ -19,7 +19,7 @@ export default function Dropdown({isEllipsisOpen, setIsEllipsisOpen, children}) 
       }
       
       return () => document.removeEventListener("mousedown", handleClickOutside)
-    }, [isEllipsisOpen])
+    }, [isEllipsisOpen, setIsEllipsisOpen, ellipsisRef])
   
   return (<>
         {isEllipsisOpen &&  <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} ref={ellipsisRef} id='ellipsisOpen' className="ellipsisOpen">{children}</motion.div>}
