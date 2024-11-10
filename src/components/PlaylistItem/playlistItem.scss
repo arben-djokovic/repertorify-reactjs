@@ -33,7 +33,7 @@
         }
         .heart{
             margin-top: auto;
-            font-size: 22px;
+            font-size: 24px;
         }
     }
 }
@@ -43,13 +43,14 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
-        padding: 10px;
+        padding: 10px 20px 10px 10px;
         .user{
             justify-content: space-between;
             width: 100%;
             align-items: center;
             font-size: 13px;
             .userInfo{
+                grid-gap: 7px;
                 .username{
                     font-size: 11px;
                 }

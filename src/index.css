@@ -55,6 +55,9 @@ h1,h2,h3,h4,h5,h6{
 .addItemBtn img{
   width: 50%;
 }
+/* svg, path{
+  color: gray;
+} */
 
 /* Mobile */
 @media (max-width: 700px) {

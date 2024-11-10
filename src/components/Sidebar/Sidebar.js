@@ -45,7 +45,6 @@ export default function Sidebar() {
             <Link to="/profile" className="ellipsisItem link">Profile</Link>
             <Link to="/add-song" className="ellipsisItem link">Add Song</Link>
             <Link to="/create-playlist" className="ellipsisItem link">Create Playlist</Link>
-            <Link to="/edit-profile" className="ellipsisItem link">Edit profile</Link>
             <p className="ellipsisItem link" >Log out</p>
         </Dropdown>
       </div>

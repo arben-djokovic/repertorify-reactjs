@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Songs from "./pages/Songs/Songs";
 import Playlists from "./pages/Playlists/Playlists";
 import { useEffect } from "react";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+  
   return (
     <div className="app">
       <Header />
@@ -25,6 +27,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
             <Route path="/playlists" element={<Playlists />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>

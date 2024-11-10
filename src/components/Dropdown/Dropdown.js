@@ -1,9 +1,15 @@
 import React, { useEffect, useRef } from 'react'
 import "./dropdown.scss"
 import {motion} from 'framer-motion'
+// import { useLocation } from 'react-router-dom';
 
 export default function Dropdown({isEllipsisOpen, setIsEllipsisOpen, children}) {
     const ellipsisRef = useRef(null) 
+    // const location = useLocation();
+
+    // useEffect(() => {
+    //   setIsEllipsisOpen(false)
+    // }, [location.pathname]);
   
     useEffect(() => {
       const handleClickOutside = (event) => {
