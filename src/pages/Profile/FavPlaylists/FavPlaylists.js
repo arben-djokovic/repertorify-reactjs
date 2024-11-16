@@ -1,6 +1,5 @@
 import React from 'react'
 import "../profile.scss"
-import { Link } from 'react-router-dom'
 import PlaylistItem from '../../../components/PlaylistItem/PlaylistItem'
 import ProfileHeader from '../../../components/ProfileHeader/ProfileHeader'
 
