@@ -10,6 +10,7 @@ body, html{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 .moreBtn{
   padding: 7px 10px;

@@ -14,6 +14,7 @@ import FavPlaylists from "./pages/Profile/FavPlaylists";
 import MySongs from "./pages/Profile/MySongs";
 import Login from "./pages/Registration/Login";
 import Signup from "./pages/Registration/Signup";
+import CreatePlaylist from "./pages/PlaylistForm/CreatePlaylist";
 
 function App() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
             <Route path="/profile/my-songs" element={<MySongs />} />
             <Route path="/log-in" element={<Login />} />
             <Route path="/sign-up" element={<Signup />} />
+            <Route path="/create-playlist" element={<CreatePlaylist />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>

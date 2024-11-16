@@ -8,27 +8,32 @@
         background-color: white;
         display: flex;
         justify-content: space-between;
+        grid-gap: 10px;
         align-items: center;
         width: 80%;
         padding: 30px;
         border-radius: 15px;
-        grid-gap: 10px;
-        .header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            h1{
-                font-size: 30px;
-                align-self: flex-start;
-            }
-            .link{
-                font-size: 12px;
-            }
+        h1{
+            font-size: 30px;
+            align-self: flex-start;
         }
         .icon{
             font-size: 140px;
             color: #9b9b9b;
             width: 35%;
+        }
+        .slider{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .mySwiper{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
         }
         form{
             display: flex;
@@ -41,24 +46,12 @@
                 grid-gap: 10px;
                 width: 100%;
                 font-size: 16px;
-                input[type="text"]{
+                input{
                     width: 100%;
                     background-color: #d9d9d9;
                     border-radius: 15px;
                     padding: 8px;
                     font-size: 18px;
-                }
-            }
-            .radioDiv{
-                display: flex;
-                justify-content: flex-start;
-                align-content: center;
-                grid-gap: 20px;
-                .radio{
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    grid-gap: 5px;
                 }
             }
             .terms{
@@ -72,29 +65,44 @@
                     color: blue;
                 }
             }
-            .formBtn{
-                background-color: #FF9800;
-                color: white;
-                border-radius: 15px;
-                font-weight: bold;
-                padding: 10px 20px;
-                align-self: flex-end;
-                font-size: 15px;
-            }
+            
+        }
+        .formBtn, .formBtnMobile{
+            background-color: #FF9800;
+            color: white;
+            border-radius: 15px;
+            font-weight: bold;
+            padding: 10px 20px;
+            align-self: flex-end;
+            font-size: 15px;
+        }
+        .formBtnMobile{
+            align-self: center;
+            display: none;
         }
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     .registration{
         .formDiv{
             width: 90%;
             grid-gap: 50px;
+            flex-direction: column-reverse;
             .icon{
                 display: none;
             }
+            .slider{
+                width: 100%;
+            }
             form{
                 width: 100%;
+            }
+            .formBtn{
+                display: none;
+            }
+            .formBtnMobile{
+                display: block;
             }
         }
     }

@@ -2,6 +2,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./registration.scss";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
@@ -9,7 +10,10 @@ export default function Signup() {
       <div className="formDiv">
         <FontAwesomeIcon className="icon" icon={faUser} />
         <form onSubmit={(e) => {e.preventDefault();}}>
-          <h1>Login</h1>
+          <div className="header">
+            <h1>Sign up</h1>
+            <Link to="/log-in" className="link">Log in</Link>
+          </div>
           <div className="input">
             <label htmlFor="username">Username/Email</label>
             <input type="text" id="username" name="username" />
