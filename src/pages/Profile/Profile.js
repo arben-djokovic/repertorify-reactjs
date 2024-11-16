@@ -1,10 +1,9 @@
 import React from 'react'
 import "./profile.scss"
 import { Link } from 'react-router-dom'
-import PlaylistItem from './../../components/PlaylistItem/PlaylistItem';
+import PlaylistItem from '../../components/PlaylistItem/PlaylistItem'
 import SongItem from '../../components/SongItem/SongItem'
-import ProfileHeader from '../../components/ProfileHeader/ProfileHeader';
-
+import ProfileHeader from '../../components/ProfileHeader/ProfileHeader'
 export default function Profile() {
   return (
     <div className='page profile pageContent'>

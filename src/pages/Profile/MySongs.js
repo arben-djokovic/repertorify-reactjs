@@ -1,7 +1,7 @@
 import React from 'react'
-import "../profile.scss"
-import ProfileHeader from '../../../components/ProfileHeader/ProfileHeader'
-import SongItem from '../../../components/SongItem/SongItem'
+import "./profile.scss"
+import SongItem from '../../components/SongItem/SongItem'
+import ProfileHeader from '../../components/ProfileHeader/ProfileHeader'
 
 export default function MySongs() {
   return (

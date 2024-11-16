@@ -1,7 +1,7 @@
 import React from 'react'
-import "../profile.scss"
-import PlaylistItem from '../../../components/PlaylistItem/PlaylistItem'
-import ProfileHeader from '../../../components/ProfileHeader/ProfileHeader'
+import "./profile.scss"
+import PlaylistItem from '../../components/PlaylistItem/PlaylistItem'
+import ProfileHeader from '../../components/ProfileHeader/ProfileHeader'
 
 export default function FavPlaylists() {
   return (
