@@ -9,6 +9,9 @@ import Songs from "./pages/Songs/Songs";
 import Playlists from "./pages/Playlists/Playlists";
 import { useEffect } from "react";
 import Profile from "./pages/Profile/Profile";
+import MyPlaylists from "./pages/Profile/MyPlaylists/MyPlaylists";
+import FavPlaylists from "./pages/Profile/FavPlaylists/FavPlaylists";
+import MySongs from "./pages/Profile/MySongs/MySongs";
 
 function App() {
   const location = useLocation();
@@ -28,6 +31,9 @@ function App() {
             <Route path="/songs" element={<Songs />} />
             <Route path="/playlists" element={<Playlists />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/my-playlists" element={<MyPlaylists />} />
+            <Route path="/profile/favourite-playlists" element={<FavPlaylists />} />
+            <Route path="/profile/my-songs" element={<MySongs />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>

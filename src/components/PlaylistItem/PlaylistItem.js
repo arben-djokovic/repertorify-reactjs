@@ -17,7 +17,7 @@ export default function PlaylistItem({i}) {
 
   return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.12, duration: 0.3 }} className="playlistItem link" onClick={playlistClick}>
     <div className="img">
-        <img src="assets/image.png" alt="" />
+        <img src="/assets/image.png" alt="" />
     </div>
     <div className="user">
         <div className="userInfo">
