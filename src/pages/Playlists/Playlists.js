@@ -14,11 +14,11 @@ export default function Playlists() {
             <img src="/assets/plus.png" alt="" />
         </Link>
         {[1,2,3,4,5,6,7,8,9].map((item, i) => (<PlaylistItem i={i} />))}
+        </div>
         <div className="arrows">
         <FontAwesomeIcon className="arrow moreBtn link" icon={faArrowLeft} />
         <FontAwesomeIcon className="arrow moreBtn link" icon={faArrowRight} />
       </div>
-        </div>
     </div>
   )
 }

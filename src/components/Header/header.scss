@@ -87,7 +87,11 @@
         .mainHeader{
             flex-direction: column;
             grid-gap: 10px;
+            .logo{
+                height: 100px;
+            }
             .search{
+                display: none;
                 input, button{
                     padding: 7px;
                 }

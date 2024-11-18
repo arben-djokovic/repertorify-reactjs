@@ -24,8 +24,11 @@ export default function PlaylistItem({i}) {
             <h3 className='playlistName'>Playlist name</h3>
             <p className='username'>beni23 - songs</p>
         </div>
+        <div className="heartDiv">
         {isLiked ? <FontAwesomeIcon onClick={() => setIsLiked(!isLiked)} id='heart' className='heart' icon={faHeart} /> :
         <FontAwesomeIcon onClick={() => setIsLiked(!isLiked)} id='heart' className='heart' icon={faRegularHeart} />}
+        <div className="likes">23</div>
+        </div>
     </div>
 </motion.div>)
 }

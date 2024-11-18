@@ -33,7 +33,7 @@ export default function CreatePlaylist() {
             <h1>Create playlist</h1>
           </div>
           <div className="input">
-            <label htmlFor="username">Name</label>
+            <label htmlFor="username">Playlist name</label>
             <input type="text" id="username" name="username" />
           </div>
           <div className="input">

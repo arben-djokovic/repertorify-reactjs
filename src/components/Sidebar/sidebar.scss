@@ -6,6 +6,7 @@
     padding: 20px;
     overflow-y: auto;
     z-index: 5;
+    overflow: visible;
     .userIcon{
         padding-right: 3px;
     }
@@ -16,6 +17,7 @@
         grid-gap: 10px;
         background-color: #F1F1F1;
         z-index: 6;
+        overflow: visible;
         &:hover{
             opacity: 0.7;
         }
@@ -33,10 +35,9 @@
         width: 100vw;
         flex-direction: row;
         justify-content: space-around;
-        padding: 5px;
+        padding: 15px;
         .navlink{
-            flex-direction: column;
-            grid-gap: 2px;
+            grid-gap: 10px;
             align-items: center;
             text-align: center;
             .usernameCarpet{

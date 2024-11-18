@@ -17,7 +17,8 @@
         .username {
             display: flex;
             align-items: center;
-            grid-gap: 2vw;
+            grid-gap: 5vw;
+            font-size: 22px;
             svg,
             path {
                 font-size: 25px;
@@ -28,6 +29,7 @@
             display: flex;
             align-items: center;
             grid-gap: 1vw;
+            font-size: 13px;
         }
     }
 }

@@ -15,6 +15,7 @@ import MySongs from "./pages/Profile/MySongs";
 import Login from "./pages/Registration/Login";
 import Signup from "./pages/Registration/Signup";
 import CreatePlaylist from "./pages/PlaylistForm/CreatePlaylist";
+import AddSong from "./pages/SongForm/AddSong";
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,10 @@ function App() {
       <Header />
       <main className="main">
         <Sidebar />
+        <form className="mobile-search">
+            <input type="text" placeholder='Search for songs...' />
+            <button className='searchBtn'>Search</button>
+        </form>
         <div className="mainContent">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -40,6 +45,7 @@ function App() {
             <Route path="/log-in" element={<Login />} />
             <Route path="/sign-up" element={<Signup />} />
             <Route path="/create-playlist" element={<CreatePlaylist />} />
+            <Route path="/add-song" element={<AddSong />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>
