@@ -7,7 +7,7 @@ import "./playlistForm.scss";
 
 export default function CreatePlaylist() {
   return (
-    <div className="registration page pageContent">
+    <div className="registrationPlaylist page pageContent">
       <div className="formDiv">
         <button className="formBtnMobile">Create</button>
         <div className="slider">
@@ -16,10 +16,19 @@ export default function CreatePlaylist() {
               <img src="/assets/image.png" alt="testimg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/assets/image.png" alt="testimg" />
+              <img src="/assets/image2.png" alt="testimg" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/assets/image.png" alt="testimg" />
+              <img src="/assets/image3.png" alt="testimg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/assets/image4.png" alt="testimg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/assets/image5.png" alt="testimg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/assets/image6.png" alt="testimg" />
             </SwiperSlide>
           </Swiper>
           <p>Pick a cover picture</p>

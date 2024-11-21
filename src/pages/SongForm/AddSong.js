@@ -7,7 +7,6 @@ export default function AddSong() {
   return (
     <div className="registrationAddSong page pageContent">
       <div className="formDiv">
-        <button className="formBtnMobile">Create</button>
         <form
           onSubmit={(e) => {
             e.preventDefault();

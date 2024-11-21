@@ -30,7 +30,7 @@
         }
         .list {
             display: flex;
-            grid-gap: 1.2vw;
+            grid-gap: 1.5vw;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
@@ -57,7 +57,7 @@
         }
       }
 }
-@media (max-width: 1170px) {
+@media (max-width: 1270px) {
     .profile {
         .myPlaylists {
             .list {
@@ -69,11 +69,20 @@
         }
     }
 }
+@media (max-width: 800px) {
+    .profile {
+        .myPlaylists {
+            .list {
+                grid-gap: 0vw;
+            }
+        }
+    }
+}
 @media (max-width: 700px) {
     .profile {
         .myPlaylists {
             .list {
-                grid-gap: 10px;
+                grid-gap: 1.5vw;
                 .playlistItem:last-of-type {
                     display: flex;
                 }

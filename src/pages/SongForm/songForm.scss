@@ -43,13 +43,6 @@
                     font-size: 18px;
                 }
             }
-            .radioDiv{
-                .radio{
-                    label, input{
-                        font-size: 11px;
-                    }
-                }
-            }
             .terms{
                 display: flex;
                 justify-content:left;
@@ -63,7 +56,7 @@
             }
             
         }
-        .formBtn, .formBtnMobile{
+        .formBtn{
             background-color: #FF9800;
             color: white;
             border-radius: 15px;
@@ -71,10 +64,6 @@
             padding: 10px 20px;
             align-self: flex-end;
             font-size: 15px;
-        }
-        .formBtnMobile{
-            align-self: center;
-            display: none;
         }
     }
     .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
@@ -90,7 +79,7 @@
 }
 
 @media screen and (max-width: 700px) {
-    .registration{
+    .registrationAddSong{
         .formDiv{
             width: 90%;
             grid-gap: 50px;
@@ -103,12 +92,6 @@
             }
             form{
                 width: 100%;
-            }
-            .formBtn{
-                display: none;
-            }
-            .formBtnMobile{
-                display: block;
             }
         }
     }

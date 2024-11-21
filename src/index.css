@@ -18,7 +18,7 @@ body, html{
   border-radius: 10px;
 }
 .delete{
-  color: rgb(255, 0, 0) !important;
+  color: rgb(255, 158, 158) !important;
 }
 .pageContent{
   max-width: 1020px;
@@ -50,8 +50,12 @@ h1,h2,h3,h4,h5,h6{
   margin-top: 18px;
   margin: 15px 13px;
   margin-bottom: auto;
-  width: 160px;
-  height: 150px;
+  width: 155px;
+  height: 145px;
+}
+label{
+    font-size: 13px;
+    color: #363636;
 }
 .addItemBtn img{
   width: 50%;
@@ -59,6 +63,14 @@ h1,h2,h3,h4,h5,h6{
 /* svg, path{
   color: gray;
 } */
+
+
+@media (max-width: 800px) {
+  .addItemBtn{
+      width: 120px;
+      height: 130px;
+  }
+}
 
 /* Mobile */
 @media (max-width: 700px) {

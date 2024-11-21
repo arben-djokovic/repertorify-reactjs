@@ -1,0 +1,18 @@
+.song{
+    background-color: white;
+    width: 100%;
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 15px;
+    padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    .icons{
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        grid-gap: 15px;
+        position: relative;
+    }
+}

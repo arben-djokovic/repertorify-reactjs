@@ -15,12 +15,8 @@
     padding: 8px;
     font-size: 13px;
     border-bottom: 1px solid white;
+    &:last-child {
+      border: none;
+    }
   }
-}
-
-@media (max-width: 700px) {
-
-  // .sidebar .ellipsisOpen {
-  //   position: static;
-  // }
 }

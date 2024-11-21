@@ -35,9 +35,9 @@ export default function Sidebar() {
           <p className="usernameCarpet">
             <span className="username">Lazo123</span>
             {isEllipsisOpen ? (
-              <FontAwesomeIcon icon={faCaretDown} />
+              <FontAwesomeIcon className="userIcon" icon={faCaretDown} />
             ) : (
-              <FontAwesomeIcon icon={faCaretRight} />
+              <FontAwesomeIcon className="userIcon" icon={faCaretRight} />
             )}
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Sidebar() {
             <Link to="/profile" className="ellipsisItem link">Profile</Link>
             <Link to="/add-song" className="ellipsisItem link">Add Song</Link>
             <Link to="/create-playlist" className="ellipsisItem link">Create Playlist</Link>
-            <p className="ellipsisItem link" >Log out</p>
+            <p className="ellipsisItem link delete" >Log out</p>
         </Dropdown>
       </div>
     </nav>

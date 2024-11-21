@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow-y: hidden;
     .main {
       flex-grow: 1;
       display: flex;
@@ -62,6 +63,9 @@
   
   
   @media (max-width: 700px) {
+    .pageContent{
+      margin-top: 15px;
+    }
     .app {
       .main {
         flex-direction: column;
