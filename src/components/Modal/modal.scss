@@ -30,11 +30,16 @@
     }  
 }   
 .closeModal{
-    background-color: rgba(0, 0, 0, 0.293);
+    background-color: rgba(0, 0, 0, 0.358);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 150vw;
+    width: 100%;
+    height: 100%;
     z-index: 10;
+}
+@media screen and (max-width: 700px) {
+    .registration .formDiv .header h1 {
+        font-size: 20px;
+    }
 }

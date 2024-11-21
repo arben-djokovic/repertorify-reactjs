@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./profileHeader.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserPen } from '@fortawesome/free-solid-svg-icons'
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import Modal from '../Modal/Modal'
 import '../../pages/Registration/registration.scss'
 
@@ -47,9 +47,17 @@ export default function ProfileHeader() {
             <p onClick={() => setIsChangePassword(true)}  className="link">Change username</p>
           </div>
           <div className="input">
-            <label htmlFor="username">Password</label>
+            <label htmlFor="username">Current Password</label>
             <input type="password" id="password" name="password" />
-          </div> </div>}
+          </div> 
+          <div className="input">
+            <label htmlFor="username">New Password</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div className="input">
+            <label htmlFor="username">Confirm Password</label>
+            <input type="password" id="password" name="password" />
+          </div></div>}
           <button className="formBtn">Change</button>
         </form>
       </div>
