@@ -6,7 +6,6 @@ import Dropdown from '../../components/Dropdown/Dropdown'
 
 export default function Song() {
     const [isEllipsisOpen, setIsEllipsisOpen] = useState(false)
-    const [isModalOpen, setIsModalOpen] = useState(false)
     const songLyrics = `
 Am         
 Dosla si iz plave praznine
