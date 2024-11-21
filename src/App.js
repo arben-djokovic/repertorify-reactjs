@@ -17,6 +17,7 @@ import Signup from "./pages/Registration/Signup";
 import CreatePlaylist from "./pages/PlaylistForm/CreatePlaylist";
 import AddSong from "./pages/SongForm/AddSong";
 import Song from "./pages/Song/Song";
+import Playlist from "./pages/Playlists/Playlist";
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
             <Route path="/create-playlist" element={<CreatePlaylist />} />
             <Route path="/add-song" element={<AddSong />} />
             <Route path="/songs/:id" element={<Song />} />
+            <Route path="/playlists/:id" element={<Playlist />} />
             <Route path="/*" element={<>404</>} />
           </Routes>
         </div>

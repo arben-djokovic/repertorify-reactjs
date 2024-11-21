@@ -26,7 +26,7 @@ export default function SongItem({song, i}) {
         {isEllipsisOpen &&   <Dropdown isEllipsisOpen={isEllipsisOpen} setIsEllipsisOpen={setIsEllipsisOpen}>
           <p id='ellipsisItem' className="ellipsisItem link">Add to playlist</p>
           <p id='ellipsisItem' className="ellipsisItem link">Edit</p>
-          <p id='ellipsisItem' onClick={()=>{setIsEllipsisOpen(false)}} className="ellipsisItem link">Delete</p>
+          <p id='ellipsisItem' onClick={()=>{setIsEllipsisOpen(false)}} className="ellipsisItem link delete">Delete</p>
         </Dropdown>}
     </div>
   </motion.div>

@@ -13,7 +13,7 @@ export default function Dropdown({isEllipsisOpen, setIsEllipsisOpen, children}) 
   
     useEffect(() => {
       const handleClickOutside = (event) => {
-        if ((ellipsisRef.current && !ellipsisRef.current.contains(event.target))) {
+        if ((ellipsisRef.current && !ellipsisRef.current.contains(event.target)) && event.target.tagName !== "path" && event.target.tagName !== "svg" ) {
           setIsEllipsisOpen(false)
         }
       }

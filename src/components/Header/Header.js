@@ -23,7 +23,7 @@ export default function Header() {
             </form>
         </section>
         <section className="abc">
-            <div className="letters pageContent" >
+            <div className="letters" >
                 {letters.map((letter, index) => (
                     <p key={index} className="letter">
                         {letter}
