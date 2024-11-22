@@ -27,17 +27,17 @@ export default function Sidebar() {
       </Link>
       <div className="openDropdown">
         <div
-          onClick={() => setIsEllipsisOpen(true)}
+          onClick={() => setIsEllipsisOpen(!isEllipsisOpen)}
           className="navlink link"
           id="dropdownLink"
         >
-          <FontAwesomeIcon className="userIcon" icon={faUser} />
-          <p className="usernameCarpet">
-            <span className="username">Lazo123</span>
+          <FontAwesomeIcon className="userIcon link" icon={faUser} />
+          <p className="usernameCarpet link">
+            <span className="username link">Lazo123</span>
             {isEllipsisOpen ? (
-              <FontAwesomeIcon className="userIcon" icon={faCaretDown} />
+              <FontAwesomeIcon className="userIcon link" icon={faCaretDown} />
             ) : (
-              <FontAwesomeIcon className="userIcon" icon={faCaretRight} />
+              <FontAwesomeIcon className="userIcon link" icon={faCaretRight} />
             )}
           </p>
         </div>

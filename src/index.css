@@ -50,8 +50,12 @@ h1,h2,h3,h4,h5,h6{
   margin-top: 18px;
   margin: 15px 13px;
   margin-bottom: auto;
-  width: 155px;
-  height: 145px;
+  width: calc(13vw - 26px);
+  min-width: calc(155px - 26px);
+  max-width: calc(190px - 26px);
+  height: 10.5vw;
+  min-height: 120px;
+  max-height: 160px;
 }
 label{
     font-size: 13px;
@@ -65,20 +69,16 @@ label{
 } */
 
 
-@media (max-width: 800px) {
-  .addItemBtn{
-      width: 120px;
-      height: 130px;
-  }
-}
-
 /* Mobile */
 @media (max-width: 700px) {
   /* Styles for mobile devices */
   .addItemBtn{
       width: 100%;
-      height: 50px;
+      min-width: unset;
+      max-width: unset;
+      height: 60px;
       margin: 0;
+      min-height: unset;
   }
   .addItemBtn img{
     width: 30px;

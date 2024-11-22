@@ -36,15 +36,8 @@ export default function ProfileHeader() {
         <FontAwesomeIcon className="icon" icon={faUser} />
         <form onSubmit={(e) => {e.preventDefault();}}>
          {isChangePassword ? <div><div className="header">
-            <h1>Change username</h1>
-            <p onClick={() => setIsChangePassword(false)} className="link">Change password</p>
-          </div>
-          <div className="input">
-            <label htmlFor="username">Username</label>
-            <input type="text" id="username" name="username" />
-          </div> </div> : <div><div className="header">
             <h1>Change password</h1>
-            <p onClick={() => setIsChangePassword(true)}  className="link">Change username</p>
+            <p onClick={() => setIsChangePassword(false)}  className="link">Change username</p>
           </div>
           <div className="input">
             <label htmlFor="username">Current Password</label>
@@ -57,7 +50,14 @@ export default function ProfileHeader() {
           <div className="input">
             <label htmlFor="username">Confirm Password</label>
             <input type="password" id="password" name="password" />
-          </div></div>}
+          </div></div> : <div><div className="header">
+            <h1>Change username</h1>
+            <p onClick={() => setIsChangePassword(true)} className="link">Change password</p>
+          </div>
+          <div className="input">
+            <label htmlFor="username">Username</label>
+            <input type="text" id="username" name="username" />
+          </div> </div>}
           <button className="formBtn">Change</button>
         </form>
       </div>

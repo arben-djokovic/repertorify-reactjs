@@ -9,9 +9,6 @@ import Songs from "./pages/Songs/Songs";
 import Playlists from "./pages/Playlists/Playlists";
 import { useEffect } from "react";
 import Profile from "./pages/Profile/Profile";
-import MyPlaylists from "./pages/Profile/MyPlaylists";
-import FavPlaylists from "./pages/Profile/FavPlaylists";
-import MySongs from "./pages/Profile/MySongs";
 import Login from "./pages/Registration/Login";
 import Signup from "./pages/Registration/Signup";
 import CreatePlaylist from "./pages/PlaylistForm/CreatePlaylist";
@@ -41,9 +38,6 @@ function App() {
             <Route path="/songs" element={<Songs />} />
             <Route path="/playlists" element={<Playlists />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/profile/my-playlists" element={<MyPlaylists />} />
-            <Route path="/profile/favourite-playlists" element={<FavPlaylists />} />
-            <Route path="/profile/my-songs" element={<MySongs />} />
             <Route path="/log-in" element={<Login />} />
             <Route path="/sign-up" element={<Signup />} />
             <Route path="/create-playlist" element={<CreatePlaylist />} />
