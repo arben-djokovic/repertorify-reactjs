@@ -2,9 +2,14 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./registration.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate()
+  const logIn = () => {
+    localStorage.setItem("token", "token");
+    navigate("/")
+  };
   return (
     <div className="registration page pageContent">
       <div className="formDiv">
@@ -22,7 +27,7 @@ export default function Login() {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" />
           </div>
-          <button className="formBtn">Log in</button>
+          <button onClick={logIn} className="formBtn">Log in</button>
         </form>
       </div>
     </div>

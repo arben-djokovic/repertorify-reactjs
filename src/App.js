@@ -14,7 +14,9 @@ import Signup from "./pages/Registration/Signup";
 import CreatePlaylist from "./pages/PlaylistForm/CreatePlaylist";
 import AddSong from "./pages/SongForm/AddSong";
 import Song from "./pages/Song/Song";
-import Playlist from "./pages/Playlists/Playlist";
+import Playlist from "./pages/Playlist/Playlist";
+import 'react-toastify/dist/ReactToastify.css';
+import { GuestRoute, UserRoute } from "./controllers/RoutesController";
 
 function App() {
   const location = useLocation();
@@ -37,11 +39,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
             <Route path="/playlists" element={<Playlists />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/log-in" element={<Login />} />
-            <Route path="/sign-up" element={<Signup />} />
-            <Route path="/create-playlist" element={<CreatePlaylist />} />
-            <Route path="/add-song" element={<AddSong />} />
+            <Route path="/profile" element={<UserRoute><Profile /></UserRoute>} />
+            <Route path="/login" element={<GuestRoute><Login /></GuestRoute>} />
+            <Route path="/signup" element={<GuestRoute><Signup /></GuestRoute>} />
+            <Route path="/create-playlist" element={<UserRoute><CreatePlaylist /></UserRoute>} />
+            <Route path="/add-song" element={<UserRoute><AddSong /></UserRoute>} />
             <Route path="/songs/:id" element={<Song />} />
             <Route path="/playlists/:id" element={<Playlist />} />
             <Route path="/*" element={<>404</>} />

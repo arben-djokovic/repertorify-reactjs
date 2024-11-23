@@ -42,6 +42,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            margin-bottom: 20px;
         }
     }
     .songsHome{
@@ -50,6 +51,7 @@
         border-radius: 0px 0 15px 15px;
         padding: 50px 1vw;
         h1{
+            margin-bottom: 20px;
             font-weight: normal;
         }
         .listSongs{

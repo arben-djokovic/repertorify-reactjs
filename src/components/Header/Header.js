@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "./header.scss"
+import { isAuthenticated } from '../../controllers/TokenController';
 
 export default function Header() {
     const navigate = useNavigate()
@@ -10,9 +11,11 @@ export default function Header() {
         <section className="top">
             <Link to="/about-us">What is Repertorify? </Link>
             <div className="sign">
-                <Link to="/log-in">Log In</Link>
+                {isAuthenticated() ? <>Lazo123</> : <>
+                <Link to="/login">Log In</Link>
                 <span> | </span>
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/signup">Sign Up</Link>
+                </>}
             </div>
         </section>
         <section className="mainHeader">

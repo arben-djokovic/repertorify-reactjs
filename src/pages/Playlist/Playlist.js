@@ -5,6 +5,7 @@ import { faEllipsisV, faFilePdf, faHeart } from "@fortawesome/free-solid-svg-ico
 import { faHeart as faRegularHeart } from '@fortawesome/free-regular-svg-icons'
 import "./playlist.scss";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import { isAuthenticated } from "../../controllers/TokenController";
 
 export default function Playlist() {
     const [isEllipsisOpen, setIsEllipsisOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function Playlist() {
         {isLiked ? <FontAwesomeIcon onClick={() => setIsLiked(!isLiked)} id='heart' className='heart' icon={faHeart} /> :
         <FontAwesomeIcon onClick={() => setIsLiked(!isLiked)} id='heart' className='heart' icon={faRegularHeart} />}
         <FontAwesomeIcon className="icon" icon={faFilePdf} />
+        {isAuthenticated() && <>
         <FontAwesomeIcon
           id="icon"
           className="modalIcon"
@@ -43,6 +45,7 @@ export default function Playlist() {
             </p>
           </Dropdown>
         )}
+        </>}
       </div>
       <h1 className="playlistTitle">ExYu hitovi</h1>
       <div className="songsList">
@@ -50,9 +53,10 @@ export default function Playlist() {
           1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
           11,
         ].map((song, i) => (
-          <SongItem song={song} i={i} />
+          <SongItem song={song} key={i} i={i} />
         ))}
       </div>
+      <button to="/songs" className="moreBtn">Show more...</button>
     </section>
   );
 }

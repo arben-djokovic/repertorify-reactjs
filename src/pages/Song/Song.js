@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import { isAuthenticated } from "../../controllers/TokenController";
 
 export default function Song() {
   const [isEllipsisOpen, setIsEllipsisOpen] = useState(false);
@@ -47,6 +48,7 @@ ti najljepsa muzika sto znam
     <div className="song page pageContent">
       <div className="icons">
         <FontAwesomeIcon className="icon" icon={faFilePdf} />
+        {isAuthenticated() && <>
         <FontAwesomeIcon
           id="icon"
           className="modalIcon"
@@ -75,6 +77,7 @@ ti najljepsa muzika sto znam
             </p>
           </Dropdown>
         )}
+        </>}
       </div>
       <div className="songInfo">
         <h1 className="title">Kome dolazis u san</h1>

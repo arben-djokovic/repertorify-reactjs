@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./profile.scss";
-import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
-import MySongs from "./MySongs";
-import MyPlaylists from "./MyPlaylists";
-import FavPlaylists from "./FavPlaylists";
+import ProfileHeader from "../../components/Profile/ProfileHeader/ProfileHeader";
+import MySongs from "../../components/Profile/MySongs";
+import MyPlaylists from "../../components/Profile/MyPlaylists";
+import FavPlaylists from "../../components/Profile/FavPlaylists";
 
 export default function Profile() {
 

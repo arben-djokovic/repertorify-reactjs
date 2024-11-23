@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,11 +8,15 @@ import {
   faMusic,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Dropdown from "../Dropdown/Dropdown";
+import { isAuthenticated, logout } from "../../controllers/TokenController";
 
 export default function Sidebar() {
-  let [isEllipsisOpen, setIsEllipsisOpen] = React.useState(false);
+  let [isEllipsisOpen, setIsEllipsisOpen] = useState(false);
+  const navigate = useNavigate()
+
+  const logOut = () => logout(navigate);
 
   return (
     <nav className="sidebar">
@@ -25,6 +29,10 @@ export default function Sidebar() {
         <FontAwesomeIcon icon={faList} />
         <p>Playlists</p>
       </Link>
+      {!isAuthenticated() ? <Link onClick={() => setIsEllipsisOpen(false)} to="/login" className="navlink link">
+        <FontAwesomeIcon icon={faUser} />
+        <p>Log in</p>
+      </Link> :
       <div className="openDropdown">
         <div
           onClick={() => setIsEllipsisOpen(!isEllipsisOpen)}
@@ -45,9 +53,9 @@ export default function Sidebar() {
             <Link to="/profile" className="ellipsisItem link">Profile</Link>
             <Link to="/add-song" className="ellipsisItem link">Add Song</Link>
             <Link to="/create-playlist" className="ellipsisItem link">Create Playlist</Link>
-            <p className="ellipsisItem link delete" >Log out</p>
+            <p onClick={logOut} className="ellipsisItem link delete" >Log out</p>
         </Dropdown>
-      </div>
+      </div>}
     </nav>
   );
 }

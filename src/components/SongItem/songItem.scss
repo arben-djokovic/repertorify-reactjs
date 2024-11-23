@@ -9,6 +9,7 @@
     color: black;
     z-index: 2;
     transition: scale 0.1s ease;
+    height: 38px;
     &:hover{
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
       scale: 1.01;

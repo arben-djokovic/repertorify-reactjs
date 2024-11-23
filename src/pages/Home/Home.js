@@ -22,7 +22,7 @@ export default function Home() {
           modules={[Pagination]}
           className="mySwiper"
           onSwiper={(swiper) => {
-            swiperRef.current = swiper; // Store the swiper instance in the ref
+            swiperRef.current = swiper;
           }}
         >
           {[{
@@ -37,7 +37,7 @@ export default function Home() {
           }].map((slide, index) => (
             <SwiperSlide
               key={index}
-              onClick={() => swiperRef.current.slideTo(index)} // Slide to this index on click
+              onClick={() => swiperRef.current.slideTo(index)}
             >
               <div className="slajd">
                 <h1>{slide.title}</h1>
@@ -46,7 +46,7 @@ export default function Home() {
                       <img onClick={(e) => {
                         const list = [...e.target.parentElement.parentElement.parentElement.classList]
                         if(list.includes("swiper-slide-active")){
-                          navigate("/song/id")
+                          navigate("/songs/id")
                         }
                       }} src={src} alt="" key={i} />
                   ))}
@@ -62,7 +62,7 @@ export default function Home() {
         <div className="listSongs">
           {[1,2,3,4,5].map((song, i) => <SongItem key={i} i={i} />)}
         </div>
-          <Link to="/songs" className="moreBtn">More...</Link>
+          <Link to="/songs" className="moreBtn">Show more...</Link>
       </section>
     </div>
   );

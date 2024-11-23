@@ -3,8 +3,8 @@ import "./profileHeader.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faUserPen } from '@fortawesome/free-solid-svg-icons'
 import {  useNavigate } from 'react-router-dom'
-import Modal from '../Modal/Modal'
-import '../../pages/Registration/registration.scss'
+import Modal from '../../Modal/Modal'
+import '../../../pages/Registration/registration.scss'
 
 export default function ProfileHeader() {
   const navigate = useNavigate() 

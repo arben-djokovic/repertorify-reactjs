@@ -1,7 +1,7 @@
 import React from "react";
-import "./profile.scss";
+import "../../pages/Profile/profile.scss";
 import { Link } from "react-router-dom";
-import PlaylistItem from "../../components/PlaylistItem/PlaylistItem";
+import PlaylistItem from "../PlaylistItem/PlaylistItem";
 
 export default function MyPlaylists() {
   return (
@@ -10,10 +10,13 @@ export default function MyPlaylists() {
         <Link to={"/create-playlist"} className="addItemBtn">
           <img src="/assets/plus.png" alt="" />
         </Link>
-        {[1, 2, 3, 4, 5, 5 ,5 ,5,5,5,5,5,5].map((item, i) => (
-          <PlaylistItem className={i} i={i} />
+        {[1, 2, 3, 4, 5, 5 ,5 ,5,5,5,5,5].map((item, i) => (
+          <PlaylistItem isMine={true} className={i} key={i} i={i} />
         ))}
       </div>
+      <button className="moreBtn">
+        Show more...
+      </button>
     </section>
   );
 }
